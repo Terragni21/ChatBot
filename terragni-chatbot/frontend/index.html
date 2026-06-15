@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Terragni Consulting — AI Assistant</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- HEADER WITH COMPANY LOGO -->
+    <div class="header">
+      <div class="logo-wrap">
+        <img src="Terragni T transparent yellow.png" alt="Terragni Consulting Logo" class="company-logo" onerror="this.src='logo.png';">
+      </div>
+      <div class="header-text">
+        <h1>Terragni Consulting</h1>
+        <p>Human Engagement &nbsp;·&nbsp; Friction Intelligence Hub</p>
+      </div>
+      <div class="status-wrap">
+        <span class="status-dot" id="statusDot"></span>
+        <span class="status-label" id="statusLabel">Connecting...</span>
+      </div>
+    </div>
+
+    <!-- MESSAGES -->
+    <div class="messages" id="messages"></div>
+
+    <!-- STATIC QUICK QUESTIONS: ONLY FIRST QUESTION PER CATEGORY -->
+    <div class="chips-label">Quick questions</div>
+    <div class="suggestions" id="suggestions">
+      <!-- Category 1: EAS Reports -->
+      <button class="chip" data-question="Give me a complete overview of all EAS friction reports">📊 Overview: EAS friction reports</button>
+      <!-- Category 2: Terragni Company & Philosophy -->
+      <button class="chip" data-question="What is Terragni Consulting?">🏢 What is Terragni Consulting?</button>
+      <!-- Category 3: Methodology / Tools -->
+      <button class="chip" data-question="What is the FMC Model (Friction, Motivation, Context)?">🧠 What is the FMC Model?</button>
+      <!-- Category 4: Contact & Next Steps -->
+      <button class="chip" data-question="How can I start a conversation with Terragni?">📬 Contact & next steps</button>
+    </div>
+
+    <!-- INPUT AREA -->
+    <div class="input-area">
+      <div class="input-wrap">
+        <textarea
+          id="userInput"
+          placeholder="Ask about Terragni, friction reports, EAS findings, tools…"
+          rows="1"
+        ></textarea>
+      </div>
+      <button id="sendBtn" onclick="sendMessage()" title="Send">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="footer-note">Powered by Terragni Knowledge Base · Human Engagement Science</div>
+
+  </div>
+
+  <script src="js/chat.js"></script>
+</body>
+</html>
